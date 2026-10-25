@@ -1,10 +1,12 @@
 package com.caiquesenna.gestaopedidos.data.local.dao
 
+import androidx.room.Dao
 import androidx.room.Query
 import androidx.room.Upsert
 import com.caiquesenna.gestaopedidos.data.local.entity.ProdutoEntity
 import kotlinx.coroutines.flow.Flow
 
+@Dao
 interface ProdutoDao {
 
     @Query ("SELECT * FROM produtos ORDER BY nome COLLATE NOCASE ASC")

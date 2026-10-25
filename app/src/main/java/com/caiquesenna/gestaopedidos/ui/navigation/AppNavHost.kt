@@ -15,15 +15,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.navigation.NavController
+import androidx.navigation.compose.composable
 import androidx.navigation.NavGraph.Companion.findStartDestination
-import androidx.navigation.NavHost
+import androidx.navigation.compose.NavHost
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.caiquesenna.gestaopedidos.ui.navigation.itensMenu
+import com.caiquesenna.gestaopedidos.ui.dashboard.DashboardScreen
+import com.caiquesenna.gestaopedidos.ui.produto.ProdutoListScreen
 
 private data class ItemMenu (
     val rota: String,
@@ -63,7 +64,7 @@ fun AppNavHost() {
         }
     ) { innerPadding ->
         NavHost (
-            navController = NavController,
+            navController = navController,
             startDestination = Rotas.DASHBOARD,
             modifier = Modifier.padding(innerPadding)
         ) {
@@ -77,9 +78,9 @@ fun AppNavHost() {
 
             // ---- Produtos -----
             composable(Rotas.PRODUTOS) {
-                ProdutoListScreen (
-                    onNovoProduto = { navController.navigate(Rotas.produtoForm())},
-                    onEditarProduto = { id -> navController.navigate(Rotas.produtoForm(id))}
+                ProdutoListScreen(
+                    onNovoProduto = { navController.navigate(Rotas.produtoForm()) },
+                    onEditarProduto = { id -> navController.navigate(Rotas.produtoForm(id)) }
                 )
             }
             composable(
