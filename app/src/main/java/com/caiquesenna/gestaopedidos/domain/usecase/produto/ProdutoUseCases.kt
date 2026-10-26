@@ -14,13 +14,13 @@ class ObservarProdutoUseCase @Inject constructor(
 class BuscarProdutoUseCase @Inject constructor(
     private val repository: ProdutoRepository
 ) {
-    suspend fun invoke(id: Long): Produto? = repository.buscarProduto(id)
+    suspend operator fun invoke(id: Long): Produto? = repository.buscarProduto(id)
 }
 
 class SalvarProdutoUseCase @Inject constructor(
     private val repository: ProdutoRepository
 ) {
-    suspend fun invoke(produto: Produto): Result<Long> {
+    suspend operator fun invoke(produto: Produto): Result<Long> {
         if (produto.nome.isBlank()) {
             return Result.failure(IllegalArgumentException("Infome o nome do produto"))
         }
@@ -37,6 +37,6 @@ class SalvarProdutoUseCase @Inject constructor(
 class ExcluirProdutoUseCase @Inject constructor(
     private val repository: ProdutoRepository
 ) {
-    suspend fun invoke(id: Long): Result<Unit> =
+    suspend operator fun invoke(id: Long): Result<Unit> =
         runCatching { repository.excluirProduto(id) }
 }
