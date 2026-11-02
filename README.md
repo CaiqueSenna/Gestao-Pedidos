@@ -90,10 +90,10 @@ GestaoPedidos/
 ## Capturas de tela
 
 
-<img width="422" height="883" alt="image" src="https://github.com/user-attachments/assets/3c22f4ba-ae96-420e-a3d9-e2387f6443fe" />
-<img width="417" height="885" alt="image" src="https://github.com/user-attachments/assets/f6d37c8b-799d-456f-befb-f0e54f7fab37" />
-<img width="416" height="886" alt="image" src="https://github.com/user-attachments/assets/685b1ba4-3e45-41aa-a967-3e402b8709ed" />
-<img width="417" height="885" alt="image" src="https://github.com/user-attachments/assets/730d5478-7e83-45d3-9750-8937e4aef837" />
+<img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/3c22f4ba-ae96-420e-a3d9-e2387f6443fe" />
+<img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/f6d37c8b-799d-456f-befb-f0e54f7fab37" />
+<img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/685b1ba4-3e45-41aa-a967-3e402b8709ed" />
+<img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/730d5478-7e83-45d3-9750-8937e4aef837" />
 
 
 
