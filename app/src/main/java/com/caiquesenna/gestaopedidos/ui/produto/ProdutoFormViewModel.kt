@@ -9,7 +9,7 @@ import com.caiquesenna.gestaopedidos.domain.usecase.produto.SalvarProdutoUseCase
 import com.caiquesenna.gestaopedidos.ui.navigation.Rotas
 import com.caiquesenna.gestaopedidos.ui.util.paraDoubleOuNulo
 import dagger.hilt.android.lifecycle.HiltViewModel
-import jakarta.inject.Inject
+import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update

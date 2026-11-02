@@ -23,7 +23,12 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.caiquesenna.gestaopedidos.ui.cliente.ClienteFormScreen
+import com.caiquesenna.gestaopedidos.ui.cliente.ClienteListScreen
 import com.caiquesenna.gestaopedidos.ui.dashboard.DashboardScreen
+import com.caiquesenna.gestaopedidos.ui.pedido.PedidoFormScreen
+import com.caiquesenna.gestaopedidos.ui.pedido.PedidoListScreen
+import com.caiquesenna.gestaopedidos.ui.produto.ProdutoFormScreen
 import com.caiquesenna.gestaopedidos.ui.produto.ProdutoListScreen
 
 private data class ItemMenu (
@@ -121,7 +126,7 @@ fun AppNavHost() {
                 )
             }
             composable(Rotas.PEDIDO_FORM) {
-                PedidoFormScreen (onVOltar = { navController.popBackStack()})
+                PedidoFormScreen (onVoltar = { navController.popBackStack()})
             }
         }
     }

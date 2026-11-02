@@ -15,13 +15,13 @@ class ObservarClienteUseCase @Inject constructor(
 class BuscarClienteUseCase @Inject constructor(
     private val repository: ClienteRepository
 ) {
-    suspend fun invoke(id: Long): Cliente? = repository.buscarCliente(id)
+    suspend operator fun invoke(id: Long): Cliente? = repository.buscarCliente(id)
 }
 
 class SalvarClienteUseCase @Inject constructor(
     private val repository: ClienteRepository
 ) {
-    suspend fun invoke(cliente: Cliente): Result<Long> {
+    suspend operator fun invoke(cliente: Cliente): Result<Long> {
         if (cliente.nome.isBlank()) {
             return Result.failure(IllegalArgumentException("Informe o nome do cliente"))
         }
@@ -36,7 +36,7 @@ class ExcluirClienteUseCase @Inject constructor(
     private val clienteRepository: ClienteRepository,
     private val pedidoRepository: PedidoRepository
 ) {
-    suspend fun invoke(id: Long): Result<Unit> {
+    suspend operator fun invoke(id: Long): Result<Unit> {
         val qtdPedidos = pedidoRepository.contarPedidosDoCliente(id)
         if (qtdPedidos > 0) {
             return Result.failure(
