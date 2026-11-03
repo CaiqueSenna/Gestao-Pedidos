@@ -28,6 +28,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.caiquesenna.gestaopedidos.ui.util.formatarMoeda
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -81,7 +82,7 @@ fun DashboardScreen (
                 )
                 CardResumo(
                     titulo = "Faturamento",
-                    valor = resumo.faturamento.toString(),
+                    valor = resumo.faturamento.formatarMoeda(),
                     icone = Icons.Default.AttachMoney,
                     cor = MaterialTheme.colorScheme.primary,
                     onClick = onIrParaPedidos,
